@@ -21,9 +21,7 @@ import org.gradle.integtests.tooling.fixture.ToolingApiSpecification
 import org.gradle.integtests.tooling.fixture.ToolingApiVersion
 import org.gradle.test.fixtures.maven.MavenFileRepository
 import org.gradle.tooling.model.eclipse.EclipseProject
-import spock.lang.Ignore
 
-@Ignore
 @ToolingApiVersion('>=6.7')
 @TargetGradleVersion(">=6.7")
 class ToolingApiEclipseModelUnresolvedDependenciesCrossVersionSpec extends ToolingApiSpecification {
@@ -35,7 +33,7 @@ class ToolingApiEclipseModelUnresolvedDependenciesCrossVersionSpec extends Tooli
         settingsFile << 'rootProject.name = "root"'
         buildFile << """
             plugins {
-                id 'java-library'
+                id 'java'
             }
 
             repositories {

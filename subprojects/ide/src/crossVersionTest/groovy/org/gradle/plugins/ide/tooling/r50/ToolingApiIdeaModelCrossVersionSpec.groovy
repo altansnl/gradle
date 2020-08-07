@@ -34,7 +34,7 @@ class ToolingApiIdeaModelCrossVersionSpec extends ToolingApiSpecification {
 
     def "provides source dir information"() {
 
-        buildFile.text = "apply plugin: 'java'"
+        buildFile.text = ""
 
         projectDir.create {
             src {
